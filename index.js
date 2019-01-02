@@ -113,15 +113,6 @@ if(cluster.isMaster){
   for(var i = 0; i < os.cpus().length; i++){
     cluster.fork();
   }
-  // start the server
-  // httpServer.listen(config.httpPort, () => {
-  //   console.log('The server is listening on port ' + config.httpPort)
-  // });
-
-  // // start the server
-  // httpsServer.listen(config.httpsPort, () => {
-  //   console.log('The server is listening on port ' + config.httpsPort)
-  // });
 } else {
   // start the server
   httpServer.listen(config.httpPort, () => {
